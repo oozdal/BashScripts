@@ -1,0 +1,21 @@
+#!/bin/bash
+#PBS -l walltime=worktime
+#PBS -A trn-506-aa
+#PBS -l nodes=1:ppn=1:sandybridge
+#PBS -N runfile
+
+module load openmpi/1.6.3-gcc
+
+cd /gs/scratch/oozdal/mainpro/nameofpro/directory
+ 
+export OMP_NUM_THREADS=1
+
+./runfile
+
+#module add gcc/4.9.1
+
+#module load compilers/intel/12.0.4
+#module load mpi/openmpi/1.4.5_intel
+
+#module load openmpi/1.8.3-gcc
+
